@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Details</title>
+
+<link rel="stylesheet" href="kbec.css">
+
+<style>
+.details{
+    padding-top:120px;
+    max-width:900px;
+    margin:auto;
+}
+
+.details img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.details h1{
+    margin-bottom:20px;
+}
+
+.details p{
+    color:#aaa;
+    line-height:1.7;
+}
+</style>
+</head>
+
+<body>
+
+<section class="details">
+    <img id="eventImage">
+    <h1 id="eventTitle"></h1>
+    <div class="event-location">
+        📍 <span id="eventLocation"></span>
+    </div>
+    <p id="eventDesc"></p>
+    <a id="registerBtn" target="_blank" class="register-btn">
+        Register Now
+    </a>
+</section>
+
+<script src="event-details.js"></script>
+
+</body>
+</html>
