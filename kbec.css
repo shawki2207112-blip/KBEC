@@ -232,7 +232,7 @@ body{
 }
 
 .what-next .section-heading h2{
-    font-size:clamp(54px, 7vw, 96px);
+    font-size:clamp(34px, 5vw, 48px);
     line-height:1;
     margin-bottom:0;
     color:#fff;
@@ -586,6 +586,11 @@ section{
 /* SPONSORS */
 .sponsors{
     text-align:center;
+    font-size:clamp(34px, 5vw, 10px);
+    line-height:1;
+    margin-bottom:0;
+    color:#fff;
+    letter-spacing:1px;
 }
 
 .sponsor-logos{
