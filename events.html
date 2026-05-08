@@ -1,75 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KBEC Events</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBEC Events</title>
 
-<link rel="stylesheet" href="kbec.css">
+    <link rel="stylesheet" href="kbec.css" />
 
-<style>
-.events-page{
-    padding-top:120px;
-    text-align:center;
-}
+    <style>
+      .events-page {
+        padding-top: 120px;
+        text-align: center;
+      }
 
-.events-grid{
-    display:flex;
-    gap:30px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:40px;
-}
+      .events-grid {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 40px;
+      }
 
-.event-item{
-    width:280px;
-    background:#111;
-    border-radius:12px;
-    overflow:hidden;
-    cursor:pointer;
-    transition:0.3s;
-    text-decoration:none;
-    color:white;
-}
+      .event-item {
+        width: 280px;
+        background: #111;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        color: white;
+      }
 
-.event-item:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 15px #f5c51844;
-}
+      .event-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 15px #f5c51844;
+      }
 
-.event-item img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
+      .event-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
 
-.event-item h3{
-    padding:15px;
-}
-</style>
-</head>
+      .event-item h3 {
+        padding: 15px;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <section class="events-page">
+      <h1>Our Events</h1>
 
-<section class="events-page">
-    <h1>Our Events</h1>
-
-    <div class="events-grid">
-
+      <div class="events-grid">
         <!-- TEDx Event -->
         <a href="event-details.html?event=tedx" class="event-item">
-            <img src="tedx.jpg" alt="TEDx KUET">
-            <h3>TEDxKUET</h3>
+          <img src="tedx.jpg" alt="TEDx KUET" />
+          <h3>TEDxKUET</h3>
         </a>
-        
-         <!-- KBEC NEXUS Season 2 Event -->
+
+        <!-- KBEC NEXUS Season 2 Event -->
         <a href="event-details.html?event=nexusSeason2" class="event-item">
-            <img src="KBEC nexus_2.jpg" alt="KBEC NEXUS Season 2">
-            <h3>KBEC NEXUS SEASON 2</h3>
+          <img src="KBEC nexus_2.jpg" alt="KBEC NEXUS Season 2" />
+          <h3>KBEC NEXUS SEASON 2</h3>
         </a>
 
-    </div>
-</section>
-
-</body>
+        <!-- Case Crack 3.0 Event -->
+        <a href="event-details.html?event=casecrack" class="event-item">
+          <img src="casecrack.jpg" alt="CASE CRACK 3.0" />
+          <h3>CASE CRACK 3.0</h3>
+        </a>
+      </div>
+    </section>
+  </body>
 </html>

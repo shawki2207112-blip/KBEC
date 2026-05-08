@@ -40,8 +40,25 @@ WHY PARTICIPATE?
         location: "KUET, Khulna",
         registerLink: "#",
         facebookLink: "https://www.facebook.com/events/2269980206835320/?__cft__[0]=AZZF9F_SztLnasduO8ZnFCD94xCotvZIp_7RMasNY24IrJ3Oa-EekrvjrQqIf7tyxWLsbo2rEw8HmahwSLlGLl8v-R4yjVsCwQ67vkSAyySoJVDzGbc5RpFQj1zjgHagd3ggUVIBGjrGLsjM2encQP4Ivi_MtllgZlFJxRlD-4EfDqoBojonLpG3NLA6LOTtcnvYmFYpSHRrnQnqgC7CijH5XLuSFLAItC_VHOy8zWaawA&__tn__=-UK-y-R"
-    }
+    },
+    casecrack: {
+    title: "CASE CRACK 3.0",
+    image: "casecrack.jpg",
+
+    desc: `
+Case Crack is a flagship learning and case-solving platform by KUET Business and Entrepreneurship Club (KBEC), designed to prepare students for real-world tech-business challenges. It provides a structured platform to develop skills in problem analysis, strategic thinking, decision-making, and solution presentation.
+
+Through expert-led workshops, interactive discussions, and guided mentorship, participants gain hands-on experience in approaching complex cases methodically and applying solutions competitively. Case Crack focuses on grooming students to think like professionals—analytical, market-aware, and impact-driven—bridging engineering, technology, and business in practical scenarios.
+    `,
+
+    location: "KUET Campus, Khulna",
+
+    registerLink: "https://example.com/casecrack-register",
+
+    facebookLink: "https://facebook.com/"
+},
     
+
 };
 
 function setLink(anchorEl, url) {
