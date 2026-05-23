@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KBEC Login</title>
+
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<section class="login-page">
+
+    <div class="login-container">
+
+        <!-- LEFT SIDE -->
+        <div class="login-left">
+
+            <img src="logo.jpg" alt="KBEC Logo" class="login-logo">
+
+            <h1>Welcome Back</h1>
+
+            <p>
+                Login to access KBEC events,
+                registrations and dashboard.
+            </p>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="login-right">
+
+            <!-- TABS -->
+            <div class="login-tabs">
+
+                <button class="tab-btn active" id="userTab">
+                    User Login
+                </button>
+
+                <button class="tab-btn" id="adminTab">
+                    Admin Login
+                </button>
+
+            </div>
+
+            <!-- FORM -->
+            <form class="login-form">
+
+                <h2 id="loginTitle">
+                    User Login
+                </h2>
+
+                <div class="input-group">
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <!-- SIGNUP ONLY FOR USERS -->
+            <div class="signup-link" id="signupLink">
+                Don't have an account?
+                <a href="signup.html">
+                    Create Account
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="login.js"></script>
+
+</body>
+</html>
