@@ -2,7 +2,7 @@
 const eventsData = {
     tedx: {
         title: "TEDxKUET",
-        image: "tedx.jpg",
+        image: "Images/tedx.jpg",
         desc: `
 TEDxKUET is an independently organized TEDx event hosted by the KUET Business & Entrepreneurship Club as part of the global TEDx program. It gathers thought leaders, innovators, and change-makers to share inspiring ideas that spark meaningful dialogue, reflection, and action.
 
@@ -17,12 +17,12 @@ Hope this helps! Let me know if you need any other adjustments!
         `
         ,
         location: "KUET Auditorium, Khulna",
-        registerLink: "https://example.com/register-tedx",
+        registerLink: "register.aspx?event=TEDxKUET",
         facebookLink: "https://www.facebook.com/events/2439190826531758"
     },
     nexusSeason2: {
         title: "KBEC NEXUS SEASON 2",
-        image: "KBEC nexus_2.jpg",
+        image: "Images/KBEC nexus_2.jpg",
         desc: `
 KBEC_NEXUS Season 2, hosted by KUET Business and Entrepreneurship Club (KBEC), is a National Business Case Competition designed to tackle real world business challenges and craft innovative and actionable solutions. After setting a nationwide benchmark in its first season in 2024, the competition returns with greater ambition, a larger stage and even sharper competitive edge. This season aims to elevate the previous legacy, combining competitive rigor, industry exposure and nationwide visibility in one unforgettable journey.
 
@@ -38,12 +38,12 @@ WHY PARTICIPATE?
 ✓ Compete for a prize pool of BDT 2,00,000, recognition and national prestige.
         `,
         location: "KUET, Khulna",
-        registerLink: "#",
+        registerLink: "register.aspx?event=KBEC NEXUS SEASON 2",
         facebookLink: "https://www.facebook.com/events/2269980206835320/?__cft__[0]=AZZF9F_SztLnasduO8ZnFCD94xCotvZIp_7RMasNY24IrJ3Oa-EekrvjrQqIf7tyxWLsbo2rEw8HmahwSLlGLl8v-R4yjVsCwQ67vkSAyySoJVDzGbc5RpFQj1zjgHagd3ggUVIBGjrGLsjM2encQP4Ivi_MtllgZlFJxRlD-4EfDqoBojonLpG3NLA6LOTtcnvYmFYpSHRrnQnqgC7CijH5XLuSFLAItC_VHOy8zWaawA&__tn__=-UK-y-R"
     },
     casecrack: {
     title: "CASE CRACK 3.0",
-    image: "casecrack.jpg",
+        image: "Images/casecrack.jpg",
 
     desc: `
 Case Crack is a flagship learning and case-solving platform by KUET Business and Entrepreneurship Club (KBEC), designed to prepare students for real-world tech-business challenges. It provides a structured platform to develop skills in problem analysis, strategic thinking, decision-making, and solution presentation.
@@ -53,7 +53,7 @@ Through expert-led workshops, interactive discussions, and guided mentorship, pa
 
     location: "KUET Campus, Khulna",
 
-    registerLink: "https://example.com/casecrack-register",
+    registerLink: "register.aspx?event=CASE CRACK 3.0",
 
     facebookLink: "https://facebook.com/"
 },
