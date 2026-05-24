@@ -1,0 +1,123 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI;
+}
+
+body {
+    background: #0b0f14;
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: #111827;
+    padding: 30px 20px;
+}
+
+.sidebar-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+    .sidebar-menu a {
+        color: #ddd;
+        text-decoration: none;
+        padding: 14px 18px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+        .sidebar-menu a:hover {
+            background: #f5c518;
+            color: black;
+        }
+
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logout-btn {
+    background: #f5c518;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: #111827;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+    .card h2 {
+        margin-bottom: 15px;
+        color: #f5c518;
+    }
+
+    .card span,
+    .card label {
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+.quick-actions h2 {
+    margin-bottom: 25px;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.action-card {
+    background: #111827;
+    padding: 35px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+    .action-card:hover {
+        transform: translateY(-8px);
+        background: #f5c518;
+        color: black;
+    }
