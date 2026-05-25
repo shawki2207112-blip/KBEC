@@ -103,41 +103,66 @@
         </section>
 
         <!-- WHAT'S NEXT -->
-        <section class="what-next" aria-labelledby="whats-next-title">
+        <section class="what-next">
 
             <div class="section-heading">
-                <h2 id="whats-next-title">What's Next</h2>
+
+                <h2>What's Next</h2>
+
             </div>
 
             <div class="what-next-marquee">
 
+                <div class="what-next-track">
 
+                    <asp:Repeater
+                        ID="rptFeatured"
+                        runat="server">
 
-                <asp:Repeater
-                    ID="rptFeaturedEvents"
-                    runat="server">
+                        <ItemTemplate>
 
-                    <ItemTemplate>
+                            <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
+                                class="what-next-item">
 
-                        <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
-                            class="what-next-item">
+                                <%# Eval("Title") %>
 
-                           <%# Eval("Title") %>
+                            </a>
 
-                        </a>
+                            <div class="what-next-divider">
+                                |
+                            </div>
 
-                        <div class="what-next-divider">
-                            |
-                        </div>
+                        </ItemTemplate>
 
-                    </ItemTemplate>
+                    </asp:Repeater>
 
-                </asp:Repeater>
+                    <!-- DUPLICATE FOR SMOOTH LOOP -->
 
+                    <asp:Repeater
+                        ID="rptFeatured2"
+                        runat="server">
 
+                        <ItemTemplate>
+
+                            <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
+                                class="what-next-item">
+
+                                <%# Eval("Title") %>
+
+                            </a>
+
+                            <div class="what-next-divider">
+                                |
+                            </div>
+
+                        </ItemTemplate>
+
+                    </asp:Repeater>
+
+                </div>
 
             </div>
-     
+
         </section>
 
         <!-- SPONSORS -->

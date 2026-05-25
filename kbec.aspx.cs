@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace KBEC
@@ -27,17 +28,20 @@ namespace KBEC
             string query =
                 "SELECT * FROM Events WHERE IsFeatured = 1";
 
-            SqlCommand cmd =
-                new SqlCommand(query, con);
+            SqlDataAdapter sda =
+                new SqlDataAdapter(query, con);
 
-            con.Open();
+            DataTable dt = new DataTable();
 
-            rptFeaturedEvents.DataSource =
-                cmd.ExecuteReader();
+            sda.Fill(dt);
 
-            rptFeaturedEvents.DataBind();
+            rptFeatured2.DataSource = dt;
+            rptFeatured2.DataBind();
 
-            con.Close();
+            rptFeatured2.DataSource = dt;
+            rptFeatured2.DataBind();
+
+         
         }
     }
 }
