@@ -102,6 +102,20 @@
             color:#f5c518;
             font-weight:bold;
         }
+        .dashboard-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+            .dashboard-btn:hover {
+                background: #f5c518;
+                color: black;
+            }
 
     </style>
 
@@ -221,11 +235,25 @@
 
         <br />
 
+
         <asp:Label
             ID="lblMessage"
             runat="server"
             CssClass="message">
         </asp:Label>
+
+        
+        <br />
+        <a href="admin-dashboard.aspx"
+            class="dashboard-btn">Back to Dashboard
+
+        </a>
+        <br />
+        <br />
+
+
+
+
 
     </div>
 

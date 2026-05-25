@@ -30,10 +30,13 @@
 
         <nav class="sidebar-menu">
 
-            <a href="#">Dashboard</a>
-            <a href="#">Add Event</a>
+            <a href="admin-dashboard.aspx">Dashboard</a>
+            <a href="add-event.aspx">Add Event</a>
             <a href="#">Manage Events</a>
             <a href="#">Registrations</a>
+            <a href="events.aspx">
+                View Events
+            </a>
             <a href="#">Users</a>
 
         </nav>
