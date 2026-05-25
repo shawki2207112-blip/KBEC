@@ -111,88 +111,33 @@
 
             <div class="what-next-marquee">
 
-                <div class="what-next-track">
 
-                    <!-- SET 1 -->
-                    <div class="marquee-set">
 
-                        <a href="event-details.aspx?event=nexusSeason2"
+                <asp:Repeater
+                    ID="rptFeaturedEvents"
+                    runat="server">
+
+                    <ItemTemplate>
+
+                        <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
                             class="what-next-item">
-                            KBEC NEXUS S3
+
+                           <%# Eval("Title") %>
+
                         </a>
 
-                        <div class="what-next-divider">|</div>
+                        <div class="what-next-divider">
+                            |
+                        </div>
 
-                        <a href="event-details.aspx?event=casecrack"
-                            class="what-next-item">
-                            CASE CRACK 3.0
-                        </a>
+                    </ItemTemplate>
 
-                        <div class="what-next-divider">|</div>
+                </asp:Repeater>
 
-                        <a href="event-details.aspx?event=tedx"
-                            class="what-next-item">
-                            TEDX KUET 2026
-                        </a>
 
-                        <div class="what-next-divider">|</div>
 
-                    </div>
-
-                    <!-- SET 2 -->
-                    <div class="marquee-set">
-
-                        <a href="event-details.aspx?event=nexusSeason2"
-                            class="what-next-item">
-                            KBEC NEXUS S3
-                        </a>
-
-                        <div class="what-next-divider">|</div>
-
-                        <a href="event-details.aspx?event=casecrack"
-                            class="what-next-item">
-                            CASE CRACK 3.0
-                        </a>
-
-                        <div class="what-next-divider">|</div>
-
-                        <a href="event-details.aspx?event=tedx"
-                            class="what-next-item">
-                            TEDX KUET 2026
-                        </a>
-
-                        <div class="what-next-divider">|</div>
-
-                    </div>
-
-                    <!-- SET 3 -->
-                    <div class="marquee-set">
-
-                        <a href="event-details.aspx?event=nexusSeason2"
-                            class="what-next-item">
-                            KBEC NEXUS S3
-                        </a>
-
-                        <div class="what-next-divider">|</div>
-
-                        <a href="event-details.aspx?event=casecrack"
-                            class="what-next-item">
-                            CASE CRACK 3.0
-                        </a>
-
-                        <div class="what-next-divider">|</div>
-
-                        <a href="event-details.aspx?event=tedx"
-                            class="what-next-item">
-                            TEDX KUET 2026
-                        </a>
-
-                        <div class="what-next-divider">|</div>
-
-                    </div>
-
-                </div>
             </div>
+     
         </section>
 
         <!-- SPONSORS -->

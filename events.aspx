@@ -1,52 +1,59 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="events.aspx.cs" Inherits="KBEC.events" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+    CodeBehind="events.aspx.cs"
+    Inherits="KBEC.events" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+
     <title>KBEC Events</title>
 
-    <link rel="stylesheet" href="Content/kbec.css" />
+    <link rel="stylesheet"
+          href="Content/kbec.css" />
 
     <style>
-      .events-page {
-        padding-top: 120px;
-        text-align: center;
-      }
 
-      .events-grid {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 40px;
-      }
+        .events-page{
+            padding-top:120px;
+            text-align:center;
+        }
 
-      .event-item {
-        width: 280px;
-        background: #111;
-        border-radius: 12px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: 0.3s;
-        text-decoration: none;
-        color: white;
-      }
+        .events-grid{
+            display:flex;
+            gap:30px;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-top:40px;
+        }
 
-      .event-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 15px #f5c51844;
-      }
+        .event-item{
+            width:280px;
+            background:#111;
+            border-radius:12px;
+            overflow:hidden;
+            text-decoration:none;
+            color:white;
+            transition:0.3s;
+        }
 
-      .event-item img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
+        .event-item:hover{
+            transform:translateY(-10px);
+            box-shadow:0 0 15px #f5c51844;
+        }
 
-      .event-item h3 {
-        padding: 15px;
-      }
+        .event-item img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        .event-item h3{
+            padding:15px;
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -59,32 +66,25 @@
 
     <div class="events-grid">
 
-        <a href="event-details.aspx?event=tedx"
-           class="event-item">
+        <asp:Repeater ID="rptEvents"
+                      runat="server">
 
-            <img src="Images/tedx.jpg" />
+            <ItemTemplate>
 
-            <h3>TEDxKUET</h3>
+                <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
+                   class="event-item">
 
-        </a>
+                    <img src='Images/<%# Eval("ImagePath") %>' />
 
-        <a href="event-details.aspx?event=nexusSeason2"
-           class="event-item">
+                    <h3>
+                       <%# Eval("Title") %>
+                    </h3>
 
-            <img src="Images/KBEC nexus_2.jpg" />
+                </a>
 
-            <h3>KBEC NEXUS SEASON 2</h3>
+            </ItemTemplate>
 
-        </a>
-
-        <a href="event-details.aspx?event=casecrack"
-           class="event-item">
-
-            <img src="Images/casecrack.jpg" />
-
-            <h3>CASE CRACK 3.0</h3>
-
-        </a>
+        </asp:Repeater>
 
     </div>
 

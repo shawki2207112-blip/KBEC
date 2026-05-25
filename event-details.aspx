@@ -1,103 +1,95 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="event-details.aspx.cs" Inherits="KBEC.event_details" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+CodeBehind="event-details.aspx.cs"
+Inherits="KBEC.event_details" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+
     <title>Event Details</title>
 
     <link rel="stylesheet" href="Content/kbec.css" />
 
-<style>
-.details{
-    padding-top:120px;
-    max-width:900px;
-    margin:auto;
-}
+    <style>
 
-.details img{
-    width:100%;
-    border-radius:12px;
-    margin-bottom:20px;
-    opacity:0;
-    animation: fadeInUp 1s ease forwards, floatImage 4s ease-in-out infinite;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    will-change: transform;
-}
+        .details{
+            padding-top:120px;
+            max-width:900px;
+            margin:auto;
+        }
 
-@keyframes fadeInUp{
-    from{
-        opacity:0;
-        transform: translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform: translateY(0);
-    }
-}
+            .details img {
+                width: 100%;
+                border-radius: 12px;
+                margin-bottom: 20px;
+                opacity: 0;
+                animation: fadeInUp 1s ease forwards, floatImage 4s ease-in-out infinite;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                will-change: transform;
+            }
 
-@keyframes floatImage{
-    0%,100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-12px);
-    }
-}
+        @keyframes fadeInUp {
 
-.details img:hover{
-    transform: scale(1.04);
-    box-shadow: 0 0 25px rgba(245,197,24,0.35);
-}
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-.details h1{
-    margin-bottom:20px;
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.details p{
-    color:#aaa;
-    line-height:1.7;
-    white-space: pre-line;
-}
+        @keyframes floatImage {
 
-/* LOCATION */
-.event-location{
-    margin: 10px 0 20px;
-    color: #f5c518;
-    font-weight: 500;
-}
+            0%,100% {
+                transform: translateY(0);
+            }
 
-/* BUTTONS */
-.event-links{
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
+            50% {
+                transform: translateY(-12px);
+            }
+        }
 
-.register-btn{
-    padding:14px 32px;
-    background:#f5c518;
-    color:#000;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:600;
-    font-size:15px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(245,197,24,0.25);
-}
+        .details img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 25px rgba(245,197,24,0.35);
+        }
+        .details img {
+            display: block;
+        }
 
-.register-btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(245,197,24,0.4);
-}
 
-.facebook-btn{
-    background:#f5c518;
-}
-</style>
+        .details p{
+            color:#aaa;
+            line-height:1.8;
+        }
+
+        .event-location{
+            margin:15px 0;
+            color:#f5c518;
+        }
+
+        .event-links{
+            display:flex;
+            gap:15px;
+            margin-top:25px;
+        }
+
+        .register-btn{
+            padding:14px 28px;
+            background:#f5c518;
+            color:black;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -106,28 +98,60 @@
 
 <section class="details">
 
-    <img id="eventImage" />
+    <!-- EVENT IMAGE -->
 
-    <h1 id="eventTitle"></h1>
+    <asp:Image
+        ID="imgEvent"
+        runat="server" />
+
+    <!-- TITLE -->
+
+    <h1>
+
+        <asp:Label
+            ID="lblTitle"
+            runat="server" />
+
+    </h1>
+
+    <!-- LOCATION -->
 
     <div class="event-location">
-        📍 <span id="eventLocation"></span>
+
+        📍
+
+        <asp:Label
+            ID="lblLocation"
+            runat="server" />
+
     </div>
 
-    <p id="eventDesc"></p>
+    <!-- DESCRIPTION -->
+
+    <p>
+
+        <asp:Label
+            ID="lblDescription"
+            runat="server" />
+
+    </p>
+
+    <!-- BUTTONS -->
 
     <div class="event-links">
 
-        <a id="registerBtn"
-           class="register-btn">
-            Register Now
-        </a>
+        <asp:HyperLink
+            ID="btnRegister"
+            runat="server"
+            CssClass="register-btn"
+            Text="Register Now" />
 
-        <a id="facebookBtn"
-           class="register-btn facebook-btn"
-           hidden>
-            Facebook Page
-        </a>
+        <asp:HyperLink
+            ID="btnFacebook"
+            runat="server"
+            CssClass="register-btn"
+            Text="Facebook Page"
+            Target="_blank" />
 
     </div>
 
@@ -135,7 +159,6 @@
 
 </form>
 
-<script src="Scripts/event-details.js"></script>
-
 </body>
+
 </html>
