@@ -32,7 +32,7 @@
 
             <a href="admin-dashboard.aspx">Dashboard</a>
             <a href="add-event.aspx">Add Event</a>
-            <a href="#">Manage Events</a>
+            <a href="manage-events.aspx" class="dash-btn">Manage Events</a>
             <a href="#">Registrations</a>
             <a href="events.aspx">
                 View Events
