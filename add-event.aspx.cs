@@ -15,10 +15,10 @@ namespace KBEC
         {
             // ADMIN CHECK
 
-            if (Session["UserRole"] == null ||
-                Session["UserRole"].ToString() != "admin")
+            if (Session["Role"] == null ||
+                Session["Role"].ToString() != "admin")
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("admin-login.aspx");
             }
         }
 

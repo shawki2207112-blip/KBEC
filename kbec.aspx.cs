@@ -14,6 +14,23 @@ namespace KBEC
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserID"] != null)
+            {
+                pnlGuest.Visible = false;
+
+                pnlUser.Visible = true;
+
+                lblUserName.Text =
+                    Session["UserName"].ToString();
+            }
+
+            else
+            {
+                pnlGuest.Visible = true;
+
+                pnlUser.Visible = false;
+            }
+
             if (!IsPostBack)
             {
                 LoadFeaturedEvents();

@@ -52,19 +52,12 @@
         .input-group input,
         .input-group textarea{
             width:100%;
-
             padding:14px;
-
             border:none;
-
             border-radius:10px;
-
             background:#1f2937;
-
             color:white;
-
             font-size:15px;
-
             outline:none;
         }
 
@@ -79,17 +72,11 @@
         .submit-btn{
             background:#f5c518;
             color:black;
-
             border:none;
-
             padding:14px 28px;
-
             border-radius:999px;
-
             font-weight:bold;
-
             cursor:pointer;
-
             transition:0.3s;
         }
 
@@ -102,20 +89,28 @@
             color:#f5c518;
             font-weight:bold;
         }
-        .dashboard-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: 0.3s;
+
+        .dashboard-btn{
+            display:inline-block;
+            padding:12px 24px;
+            background:#222;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            transition:0.3s;
         }
 
-            .dashboard-btn:hover {
-                background: #f5c518;
-                color: black;
-            }
+        .dashboard-btn:hover{
+            background:#f5c518;
+            color:black;
+        }
+
+        .validator{
+            color:#ff6b6b;
+            font-size:14px;
+            margin-top:6px;
+            display:block;
+        }
 
     </style>
 
@@ -139,8 +134,16 @@
                 runat="server">
             </asp:TextBox>
 
-        </div>
+            <asp:RequiredFieldValidator
+                ID="rfvEventName"
+                runat="server"
+                ControlToValidate="txtEventName"
+                ErrorMessage="Event Name Required"
+                CssClass="validator"
+                ValidationGroup="eventForm">
+            </asp:RequiredFieldValidator>
 
+        </div>
 
         <!-- EVENT KEY -->
         <div class="input-group">
@@ -152,8 +155,16 @@
                 runat="server">
             </asp:TextBox>
 
-        </div>
+            <asp:RequiredFieldValidator
+                ID="rfvEventKey"
+                runat="server"
+                ControlToValidate="txtEventKey"
+                ErrorMessage="Event Key Required"
+                CssClass="validator"
+                ValidationGroup="eventForm">
+            </asp:RequiredFieldValidator>
 
+        </div>
 
         <!-- DESCRIPTION -->
         <div class="input-group">
@@ -167,8 +178,16 @@
                 Rows="6">
             </asp:TextBox>
 
-        </div>
+            <asp:RequiredFieldValidator
+                ID="rfvDescription"
+                runat="server"
+                ControlToValidate="txtDescription"
+                ErrorMessage="Description Required"
+                CssClass="validator"
+                ValidationGroup="eventForm">
+            </asp:RequiredFieldValidator>
 
+        </div>
 
         <!-- LOCATION -->
         <div class="input-group">
@@ -180,8 +199,16 @@
                 runat="server">
             </asp:TextBox>
 
-        </div>
+            <asp:RequiredFieldValidator
+                ID="rfvLocation"
+                runat="server"
+                ControlToValidate="txtLocation"
+                ErrorMessage="Location Required"
+                CssClass="validator"
+                ValidationGroup="eventForm">
+            </asp:RequiredFieldValidator>
 
+        </div>
 
         <!-- IMAGE -->
         <div class="input-group">
@@ -192,8 +219,16 @@
                 ID="fileEventImage"
                 runat="server" />
 
-        </div>
+            <asp:RequiredFieldValidator
+                ID="rfvImage"
+                runat="server"
+                ControlToValidate="fileEventImage"
+                ErrorMessage="Event Image Required"
+                CssClass="validator"
+                ValidationGroup="eventForm">
+            </asp:RequiredFieldValidator>
 
+        </div>
 
         <!-- FACEBOOK -->
         <div class="input-group">
@@ -206,7 +241,6 @@
             </asp:TextBox>
 
         </div>
-
 
         <!-- FEATURED -->
         <div class="checkbox-group">
@@ -224,17 +258,16 @@
 
         </div>
 
-
         <!-- BUTTON -->
         <asp:Button
             ID="btnAddEvent"
             runat="server"
             Text="Add Event"
             CssClass="submit-btn"
-            OnClick="btnAddEvent_Click" />
+            OnClick="btnAddEvent_Click"
+            ValidationGroup="eventForm" />
 
         <br />
-
 
         <asp:Label
             ID="lblMessage"
@@ -242,18 +275,17 @@
             CssClass="message">
         </asp:Label>
 
-        
         <br />
+
         <a href="admin-dashboard.aspx"
-            class="dashboard-btn">Back to Dashboard
+            class="dashboard-btn">
+
+            Back to Dashboard
 
         </a>
+
         <br />
         <br />
-
-
-
-
 
     </div>
 

@@ -14,10 +14,10 @@ namespace KBEC
         protected void Page_Load(object sender, EventArgs e)
         {
             // CHECK ADMIN LOGIN
-            if (Session["UserRole"] == null ||
-                Session["UserRole"].ToString() != "admin")
+            if (Session["Role"] == null ||
+                Session["Role"].ToString() != "admin")
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("admin-login.aspx");
             }
 
             if (!IsPostBack)
