@@ -53,7 +53,7 @@ namespace KBEC
             }
             else
             {
-                Response.Write("Invalid User Account");
+                lblMessage.Text = "Invalid User Account";
             }
 
             con.Close();

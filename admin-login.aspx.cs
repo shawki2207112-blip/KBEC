@@ -53,7 +53,7 @@ namespace KBEC
             }
             else
             {
-                Response.Write("Invalid Admin Account");
+                lblMessage.Text ="Invalid Email or Password";
             }
 
             con.Close();

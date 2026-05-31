@@ -64,6 +64,15 @@
                     CssClass="login-btn"
                     OnClick="btnLogin_Click" />
 
+                <br />
+                <br />
+
+                <asp:Label
+                    ID="lblMessage"
+                    runat="server"
+                    ForeColor="Red"
+                    CssClass="error-message"></asp:Label>
+
                 <br /><br />
 
                 <a href="signup.aspx">
