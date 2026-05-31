@@ -33,11 +33,11 @@
             <a href="admin-dashboard.aspx">Dashboard</a>
             <a href="add-event.aspx">Add Event</a>
             <a href="manage-events.aspx" class="dash-btn">Manage Events</a>
-            <a href="#">Registrations</a>
+            <a href="manage-registrations.aspx">Registrations Status</a>
             <a href="events.aspx">
                 View Events
             </a>
-            <a href="#">Users</a>
+            <a href="view-registrations.aspx">All Registrations</a>
 
         </nav>
 
@@ -121,7 +121,7 @@
                     Manage Events
                 </a>
 
-                <a href="registrations.aspx" class="action-card">
+                <a href="view-registrations.aspx" class="action-card">
                     View Registrations
                 </a>
 

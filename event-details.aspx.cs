@@ -153,6 +153,29 @@ namespace KBEC
             int userId =
                 Convert.ToInt32(Session["UserID"]);
 
+            // CHECH IF REGISTRATION IS CLOSED
+            string checkStatus = @"
+                SELECT RegistrationOpen
+                        FROM Events WHERE EventID=@id";
+
+            SqlCommand statusCmd =
+                new SqlCommand(checkStatus, con);
+
+            statusCmd.Parameters.AddWithValue(
+                "@id",
+                eventId);
+
+            bool isOpen =
+                Convert.ToBoolean(
+                    statusCmd.ExecuteScalar());
+
+            if (!isOpen)
+            {
+                Response.Write("Registration Closed");
+                con.Close();
+                return;
+            }
+
             // CHECK DUPLICATE REGISTRATION
 
             string checkQuery = @"
