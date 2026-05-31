@@ -79,9 +79,9 @@ namespace KBEC
             cmd.ExecuteNonQuery();
 
             con.Close();
-
-            lblMessage.Text =
-                "Event Added Successfully";
+            ClientScript.RegisterStartupScript(this.GetType(),"success",
+            "alert('Event Added Successfully!');window.location='admin-dashboard.aspx';",
+            true);
 
             ClearFields();
         }
