@@ -140,11 +140,12 @@ Inherits="KBEC.event_details" %>
 
     <div class="event-links">
 
-        <asp:HyperLink
+        <asp:Button
             ID="btnRegister"
             runat="server"
+            Text="Register Now"
             CssClass="register-btn"
-            Text="Register Now" />
+            OnClick="btnRegister_Click" />
 
         <asp:HyperLink
             ID="btnFacebook"

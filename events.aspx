@@ -71,7 +71,7 @@
 
             <ItemTemplate>
 
-                <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
+                <a href='event-details.aspx?key=<%# Eval("EventKey") %>'
                    class="event-item">
 
                     <img src='Images/<%# Eval("ImagePath") %>' />
