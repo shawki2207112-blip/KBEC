@@ -71,6 +71,16 @@ CommandName="CloseRegistration"/>
 </Columns>
 
 </asp:GridView>
+    <div style="margin:20px;">
+    <a href="admin-dashboard.aspx"
+       style="
+       color:#f5c518;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:14px;">
+       ← Back To Dashboard
+    </a>
+</div>
 
 </form>
 

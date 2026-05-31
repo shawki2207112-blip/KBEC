@@ -75,8 +75,14 @@
 
                 <br /><br />
 
-                <a href="signup.aspx">
-                    Create Account
+                <a href="signup.aspx" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">
+                    Don't Have an Account? Create Account
+                </a>
+                <br />
+                <br />
+
+                <a href="kbec.aspx"
+                    style="color: #f5c518; text-decoration: none; font-weight: bold; font-size: 14px;">← Back To Home
                 </a>
 
             </div>

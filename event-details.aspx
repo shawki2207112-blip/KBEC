@@ -155,6 +155,15 @@ Inherits="KBEC.event_details" %>
             Target="_blank" />
 
     </div>
+    <br /><br />
+    <a href="kbec.aspx"
+       style="
+       color:#f5c518;
+       text-decoration:none;
+       font-weight:bold;
+       font-size:14px;">
+       ← Back To Home
+    </a>
 
 </section>
 

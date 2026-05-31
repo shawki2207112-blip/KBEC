@@ -72,6 +72,12 @@
                     runat="server"
                     ForeColor="Red"
                     CssClass="error-message"></asp:Label>
+                <br />
+                <br />
+
+                <a href="kbec.aspx"
+                    style="color: #f5c518; text-decoration: none; font-weight: bold; font-size: 14px;">← Back To Home
+                </a>
 
             </div>
 

@@ -153,7 +153,7 @@ namespace KBEC
             int userId =
                 Convert.ToInt32(Session["UserID"]);
 
-            // CHECH IF REGISTRATION IS CLOSED
+            // CHECK IF REGISTRATION IS CLOSED
             string checkStatus = @"
                 SELECT RegistrationOpen
                         FROM Events WHERE EventID=@id";
@@ -171,7 +171,8 @@ namespace KBEC
 
             if (!isOpen)
             {
-                Response.Write("Registration Closed");
+                ClientScript.RegisterStartupScript(this.GetType(), "success",
+                "alert('Registration is closed :)';window.location='kbec.aspx';",true);
                 con.Close();
                 return;
             }
@@ -201,7 +202,8 @@ namespace KBEC
 
             if (count > 0)
             {
-                Response.Write("Already Registered");
+                ClientScript.RegisterStartupScript(this.GetType(), "success",
+                "alert('Already Registered!');window.location='kbec.aspx';",true);
                 con.Close();
                 return;
             }
@@ -237,7 +239,8 @@ namespace KBEC
 
             con.Close();
 
-            Response.Write("Registered Successfully");
+            ClientScript.RegisterStartupScript(this.GetType(), "success",
+            "alert('Registered Successfully!');window.location='kbec.aspx';",true);
         }
     }
 }

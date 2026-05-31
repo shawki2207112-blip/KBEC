@@ -71,7 +71,7 @@ namespace KBEC
 
             con.Close();
 
-            Response.Redirect("login.aspx");
+            Response.Redirect("user-login.aspx");
         }
     }
 }

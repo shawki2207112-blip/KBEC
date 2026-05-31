@@ -98,7 +98,7 @@
                 <br />
                 <br />
 
-                <a href="login.aspx">
+                <a href="login.aspx" style="color: white;">
                     Already have account?
                 </a>
 
