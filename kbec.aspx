@@ -30,19 +30,57 @@
                 aria-labelledby="profileMenuButton"
                 hidden>
 
-                <div class="profile-menu-title">Login as</div>
+                <!-- NOT LOGGED IN -->
 
-                <a href="login.aspx?type=admin"
-                    class="profile-menu-item"
-                    role="menuitem">
-                    Admin Login
-                </a>
+                <asp:Panel
+                    ID="pnlGuest"
+                    runat="server">
 
-                <a href="login.aspx?type=user"
-                    class="profile-menu-item"
-                    role="menuitem">
-                    User Login
-                </a>
+                    <div class="profile-menu-title">
+                        Login as
+
+       
+                    </div>
+
+                    <a href="admin-login.aspx"
+                        class="profile-menu-item">Admin Login
+
+                    </a>
+
+                    <a href="user-login.aspx"
+                        class="profile-menu-item">User Login
+
+                     </a>
+
+                </asp:Panel>
+
+                <!-- LOGGED IN -->
+
+                <asp:Panel
+                    ID="pnlUser"
+                    runat="server"
+                    Visible="false">
+
+                    <div class="profile-menu-title">
+                        Welcome
+           
+                        <asp:Label
+                            ID="lblUserName"
+                            runat="server" />
+
+                    </div>
+
+                    <a href="my-registrations.aspx"
+                        class="profile-menu-item">My Registrations
+
+                    </a>
+
+                    <a href="logout.aspx"
+                        class="profile-menu-item">Logout
+
+                    </a>
+
+                </asp:Panel>
             </div>
 
             <nav class="nav-links">
@@ -121,7 +159,7 @@
 
                         <ItemTemplate>
 
-                            <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
+                            <a href='event-details.aspx?key=<%# Eval("EventKey") %>'
                                 class="what-next-item">
 
                                 <%# Eval("Title") %>
@@ -144,7 +182,7 @@
 
                         <ItemTemplate>
 
-                            <a href='event-details.aspx?event=<%# Eval("EventKey") %>'
+                            <a href='event-details.aspx?key=<%# Eval("EventKey") %>'
                                 class="what-next-item">
 
                                 <%# Eval("Title") %>

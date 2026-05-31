@@ -32,36 +32,75 @@
                 <h2>Create Account</h2>
 
                 <div class="input-group">
+
                     <label>Full Name</label>
-                    <input type="text" required />
+
+                    <asp:TextBox
+                        ID="txtName"
+                        runat="server"
+                        required="required" />
+
                 </div>
 
                 <div class="input-group">
+
                     <label>Roll</label>
-                    <input type="text" required />
+
+                    <asp:TextBox
+                        ID="txtRoll"
+                        runat="server"
+                        required="required" />
+
                 </div>
 
                 <div class="input-group">
+
                     <label>Department</label>
-                    <input type="text" required />
+
+                    <asp:TextBox
+                        ID="txtDepartment"
+                        runat="server"
+                        required="required" />
+
                 </div>
 
                 <div class="input-group">
+
                     <label>Email</label>
-                    <input type="email" required />
+
+                    <asp:TextBox
+                        ID="txtEmail"
+                        runat="server"
+                        TextMode="Email"
+                        required="required" />
+
                 </div>
 
                 <div class="input-group">
+
                     <label>Password</label>
-                    <input type="password" required />
+
+                    <asp:TextBox
+                        ID="txtPassword"
+                        runat="server"
+                        TextMode="Password"
+                        required="required" />
+
                 </div>
 
-                <button type="submit"
-                        class="login-btn">
+                <asp:Button
+                    ID="btnSignup"
+                    runat="server"
+                    Text="Create Account"
+                    CssClass="login-btn"
+                    OnClick="btnSignup_Click" />
 
-                    Create Account
+                <br />
+                <br />
 
-                </button>
+                <a href="login.aspx">
+                    Already have account?
+                </a>
 
             </div>
 
@@ -74,4 +113,5 @@
 </form>
 
 </body>
+
 </html>
