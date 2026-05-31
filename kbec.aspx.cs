@@ -52,8 +52,8 @@ namespace KBEC
 
             sda.Fill(dt);
 
-            rptFeatured2.DataSource = dt;
-            rptFeatured2.DataBind();
+            rptFeatured.DataSource = dt;
+            rptFeatured.DataBind();
 
             rptFeatured2.DataSource = dt;
             rptFeatured2.DataBind();
