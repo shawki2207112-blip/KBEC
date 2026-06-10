@@ -141,25 +141,39 @@ namespace KBEC
         }
 
         protected void gvEvents_RowDeleting(
-            object sender,
-            GridViewDeleteEventArgs e)
+        object sender,
+        GridViewDeleteEventArgs e)
         {
             int eventId = Convert.ToInt32(
                 gvEvents.DataKeys[e.RowIndex].Value);
 
-            SqlConnection con = new SqlConnection(cs);
-
-            string query =
-                "DELETE FROM Events WHERE EventID=@id";
-
-            SqlCommand cmd =
-                new SqlCommand(query, con);
-
-            cmd.Parameters.AddWithValue("@id", eventId);
+            SqlConnection con =
+                new SqlConnection(cs);
 
             con.Open();
 
-            cmd.ExecuteNonQuery();
+            SqlCommand cmd1 =
+                new SqlCommand(
+                    "DELETE FROM Registrations WHERE EventID=@id",
+                    con);
+
+            cmd1.Parameters.AddWithValue(
+                "@id",
+                eventId);
+
+            int deletedRows =
+                cmd1.ExecuteNonQuery();
+
+            SqlCommand cmd2 =
+                new SqlCommand(
+                    "DELETE FROM Events WHERE EventID=@id",
+                    con);
+
+            cmd2.Parameters.AddWithValue(
+                "@id",
+                eventId);
+
+            cmd2.ExecuteNonQuery();
 
             con.Close();
 
